@@ -27,7 +27,7 @@ Feature: It is Friday yet ?
         | anything else! | Nope   |
 ---
 
-Lancement des tests:
-image::images/testsTP1.PNG[]
+.Lancement des tests:
+image:images/testsTP1.PNG[ ]
 
 == TP2
