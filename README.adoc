@@ -9,7 +9,7 @@ Ce dépôt concerne les rendus de mailto:ludovic.estival@etu.univ-tlse2.fr[Ludov
 
 Fichier `is_it_friday_yet.feature`:
 [source]
----
+----
 Feature: It is Friday yet ?
     Scenario: Sunday isn't Friday
         Given today is Sunday
@@ -25,9 +25,40 @@ Feature: It is Friday yet ?
         | Friday         | TGIF   |
         | Sunday         | Nope   |
         | anything else! | Nope   |
----
+----
 
 Lancement des tests:
-image::images/testsTP1.PNG[]
+image:images/testsTP1.PNG[]
 
 == TP2
+
+Fichier `Order.java`:
+[source,java]
+----
+package cucumbertp2;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Order {
+
+    private String owner;
+    private String target;
+    private List<String> cocktailsList = new ArrayList<String>();
+
+    public void declareOwner(String someone) {
+        this.owner = someone;
+    }
+
+    public void declareTarget(String someone) {
+        this.target = someone;
+    }
+
+    public void getCocktails() {
+        return this.cocktailsList;
+    }
+}
+----
+
+Lancement des tests:
+image:images/testsTP2.PNG[]
