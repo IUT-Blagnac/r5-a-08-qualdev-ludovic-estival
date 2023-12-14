@@ -1,7 +1,6 @@
 package cucumbertp2;
 
 import io.cucumber.java.en.*;
-
 import java.util.List;
 import static org.junit.Assert.*;
 
