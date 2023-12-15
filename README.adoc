@@ -62,3 +62,11 @@ public class Order {
 
 Lancement des tests:
 image:images/testsTP2.PNG[]
+
+== TP3
+
+== TP4
+
+Documentation générée par cukedoctor:
+
+image:images/testsTP4.PNG[]
