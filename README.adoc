@@ -1,22 +1,72 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13208624&assignment_repo_type=AssignmentRepo)
 = R5.A.08 -- Dépôt pour les TPs
 :icons: font
 :MoSCoW: https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[MoSCoW]
 
-Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
+Ce dépôt concerne les rendus de mailto:ludovic.estival@etu.univ-tlse2.fr[Ludovic Estival].
 
 == TP1
 
-.Exemple de code
+Fichier `is_it_friday_yet.feature`:
+[source]
+----
+Feature: It is Friday yet ?
+    Scenario: Sunday isn't Friday
+        Given today is Sunday
+        When I ask if today is Friday
+        Then the response is "Nope"
+
+    Scenario Outline: Friday is Friday
+        Given today is Friday
+        When I ask wether it's Friday yet
+        Then I should be told "TGIF"
+        Examples:
+        | day            | answer |
+        | Friday         | TGIF   |
+        | Sunday         | Nope   |
+        | anything else! | Nope   |
+----
+
+Lancement des tests:
+image:images/testsTP1.PNG[]
+
+== TP2
+
+Fichier `Order.java`:
 [source,java]
----
-@Given("today is Sunday")
-public void today_is_sunday() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+----
+package cucumbertp2;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Order {
+
+    private String owner;
+    private String target;
+    private List<String> cocktailsList = new ArrayList<String>();
+
+    public void declareOwner(String someone) {
+        this.owner = someone;
+    }
+
+    public void declareTarget(String someone) {
+        this.target = someone;
+    }
+
+    public void getCocktails() {
+        return this.cocktailsList;
+    }
 }
----
+----
 
-.Exemple d'image insérée en asciidoc
-image::artifacts-r303.svg[width=80%]
+Lancement des tests:
+image:images/testsTP2.PNG[]
 
-== TP2...
+== TP3
+
+== TP4
+
+Documentation générée par cukedoctor:
+
+image:images/testsTP4.PNG[]
